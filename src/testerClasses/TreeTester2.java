@@ -9,6 +9,8 @@ public class TreeTester2 {
 	public static void main(String[] args) throws CloneNotSupportedException {
 		LinkedTree<String> t = new LinkedTree<>(), 
 				              t1 = new LinkedTree<>(); 
+		LinkedTree<String> empty = new LinkedTree<>(), 
+							emptyT = new LinkedTree<>();
 		
 		// add nodes and data to the tree
 		Position<String> p = t.addRoot("ROOT"); 	
@@ -39,6 +41,9 @@ public class TreeTester2 {
 		// make a clone of t
 		t1 = t.clone(); 
 		Utils.displayTree("Clone of t", t1); 
+		
+		emptyT = empty.clone(); 
+		Utils.displayTree("Empty clone", emptyT);
 		
 		String removedElement = t.remove(ptd);
 		Utils.displayTree("Tree t after removing " + removedElement, t);

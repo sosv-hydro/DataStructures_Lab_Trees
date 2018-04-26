@@ -120,10 +120,14 @@ public class LinkedTree<E> extends AbstractTree<E> implements Cloneable {
 			}	
 		}
 		
+		Node<E> temp = (Node<E>) this.root();
+		for(int i = 0 ; i < temp.getChildren().size(); i++)
+			if(temp.getChildren().get(i).equals(ntd))
+				temp.getChildren().remove(i);
+		
 		/*******************************************************/
 		// SOME MISSING CODE HERE -- DISCOVER IT AN ADD... 
 		// AS SPECIFIED IN EXERCISE 4. 
-		
 		
 		// discard the removed node
 		ntd.discard(); 
